@@ -1,0 +1,61 @@
+@import url('https://fonts.cdnfonts.com/css/advanced-led-board-7');
+
+#fontsize {
+font-size:50px; 
+font-family:'Advanced LED Board-7', sans-serif; 
+
+}
+/*
+body {
+      margin: 0;
+      padding: 0;
+    }*/
+.tabla{
+display: table;
+}
+.fila{
+display: table-row;
+}
+.columna{
+display: table-cell;
+width: 200px;
+color:red; 
+background-color:black;
+text-align: center;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto repeat(2, 1fr) auto; /* Dos filas de altura automática, luego dos filas que ocupan el espacio restante y finalmente el footer */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas con igual ancho */
+  min-height: 100vh; /* Asegura que el grid ocupe al menos el 100% del alto de la ventana */
+}
+
+.header {
+  grid-row: 1; /* El encabezado ocupa la primera fila */
+  grid-column: 1 / -1; /* Ocupa todas las columnas disponibles */
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.grid-item {
+  padding: 20px;
+  box-sizing: border-box;
+  *text-align: center;
+}
+
+.grid-item:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.footer {
+  grid-row: 5; /* El footer ocupa la quinta fila */
+  grid-column: 1 / -1; /* Ocupa todas las columnas disponibles */
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
